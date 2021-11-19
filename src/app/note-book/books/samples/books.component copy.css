@@ -1,0 +1,108 @@
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ * Licensed under the MIT License
+ *
+ * Sass/SCSS source: https://goo.gl/uNEZ0
+ * PSD by Mathieu Berenguer: https://goo.gl/WYgk5
+ */
+
+ body {
+    font: 12px/20px 'Lucida Grande', Verdana, sans-serif;
+    color: #404040;
+    background: #3782b0;
+  }
+  
+  /* Note: I didn't use borders because WebKit extends shadows underneath them, creating inconsistencies with other browsers. When the border is semi-transparent, as this snippet requires, it appears darker because of the shadow underneath it. */
+  .notepad{
+    min-height: 200px;
+    height: calc(100vh - 45px);
+
+  }
+  .notepad, .notepad:before, .notepad:after {
+    background-color: white;
+    background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-image: linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#e8e8e8 1px, transparent 1px);
+    background-size: 1px 1px, 1px 1px, 23px 23px;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-position: 22px 0, 24px 0, 0 50px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 0 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .notepad {
+    position: relative;
+    /* margin: 30px auto; */
+    padding: 0 23px 14px 35px;
+    /* width: 300px; */
+    line-height: 23px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .notepad p, .notepad blockquote {
+    margin: 0px;
+    margin-bottom: 23px;
+    
+  }
+  
+  .notepad :last-child {
+    margin-bottom: 0;
+  }
+  
+  .notepad:before, .notepad:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 3px;
+    right: 3px;
+    margin-top: -2px;
+    height: 4px;
+    background-size: 1px 1px, 1px 1px, 0 0;
+  }
+  
+  .notepad:before {
+    z-index: -2;
+    left: 6px;
+    right: 6px;
+    height: 6px;
+    background-color: #eee;
+  }
+  
+  .notepad-heading {
+    position: relative;
+    width: calc(100vw - 16px);
+    margin-left: -35px;
+    height: 49px;
+    background: white;
+    border-bottom: 1px solid #c9c9c9
+     }
+     .notepad-heading,.notepad-heading:before ,.notepad-heading:after {
+        background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(transparent 1px, transparent 1px);
+        background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(transparent 1px, transparent 1px);
+        background-image: -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(transparent 1px, transparent 1px);
+        background-image: linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(transparent 1px, transparent 1px);
+        background-size: 1px 1px, 1px 1px, 23px 23px;
+        background-repeat: repeat-y, repeat-y, repeat;
+        background-position: 22px 0, 24px 0, 0 50px;
+        border-radius: 2px;
+     
+     }
+  .notepad-heading > h1 {
+    line-height: 54px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+  
+  
+  .notepad-heading:after {
+    bottom: 3px;
+    border-color: #071c2c;
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+  

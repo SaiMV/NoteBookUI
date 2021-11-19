@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
+ body {
+	 background: #7bccc5;
+	 font-family: 'Amatic SC', cursive;
+}
+ body * {
+	 box-sizing: border-box;
+}
+ .container {
+	 position: relative;
+	 width: 600px;
+	 height: 600px;
+	 margin: 50px auto;
+}
+ .book-base {
+	 position: absolute;
+	 top: 15%;
+	 width: 100%;
+	 height: 70%;
+	 background: #4d362e;
+	 border-radius: 1%;
+	 perspective: 1500px;
+	 box-shadow: 3px 3px 50px black;
+}
+ .book-base .page {
+	 position: absolute;
+	 top: 5%;
+	 width: 46%;
+	 height: 90%;
+	 background: #e7e2cf;
+}
+ .book-base .page .lines {
+	 position: absolute;
+	 top: 10%;
+	 width: 86%;
+	 height: 2px;
+	 background: #bab5a2;
+	 left: 7%;
+	 box-shadow: 0 20px 0 #bab5a2, 0 40px 0 #bab5a2, 0 60px 0 #bab5a2, 0 80px 0 #bab5a2, 0 100px 0 #bab5a2, 0 120px 0 #bab5a2, 0 140px 0 #bab5a2, 0 160px 0 #bab5a2, 0 180px 0 #bab5a2, 0 200px 0 #bab5a2, 0 220px 0 #bab5a2, 0 240px 0 #bab5a2, 0 260px 0 #bab5a2, 0 280px 0 #bab5a2, 0 300px 0 #bab5a2;
+}
+ .book-base .left {
+	 left: 4%;
+}
+ .book-base .left:before {
+	 content: "Day 8";
+	 position: absolute;
+	 width: 100%;
+	 font-size: 2em;
+	 text-align: center;
+}
+ .book-base .right {
+	 right: 4%;
+}
+ .book-base .right:before {
+	 content: "Notebook";
+	 position: absolute;
+	 width: 100%;
+	 font-size: 2em;
+	 text-align: center;
+}
+ .book-base .animate {
+	 transform-origin: 0% 50%;
+	 transform-style: preserve-3d;
+	 animation: flip 1.2s linear infinite;
+}
+ .book-base .divider {
+	 position: absolute;
+	 top: 5%;
+	 width: 1%;
+	 height: 90%;
+	 background: rgba(219, 214, 195, 0.6);
+	 left: 49.5%;
+	 z-index: 1;
+}
+ .flip-container {
+	 position: absolute;
+	 top: 5%;
+	 width: 46%;
+	 height: 90%;
+	 right: 4%;
+	 transform: rotateY(-120deg);
+}
+ .flip-container .page {
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+}
+ .flip-container .left, .flip-container .right {
+	 backface-visibility: hidden;
+}
+ .flip-container .left {
+	 left: 0;
+	 z-index: 2;
+	 transform: rotateY(180deg);
+}
+ .flip-container .right {
+	 z-index: 3;
+	 transform: rotateY(0deg);
+	 right: 0;
+}
+ @keyframes flip {
+	 from {
+		 transform: rotateY(0deg);
+	}
+	 to {
+		 transform: rotateY(-180deg);
+	}
+}
+ 

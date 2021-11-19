@@ -1,0 +1,27 @@
+<div class="notepad">
+  <!-- <div class="content"> -->
+    <div class="notebook-page">
+      <textarea id="msg" (keydown)="isOverflown($event)" (keyup)="isOverflown($event)"></textarea>
+      <!-- <div class="text-edit">Dear Evan Hansen,<br /><br />Today is going to be a good day. And here's why: because
+        today, today at least you're you and — that's enough.<br /><br />Sincerely, <br />Me.</div> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+
+<!-- firstHeight = 0
+  //Method to stop typing
+  isOverflown(element){
+    let scrlHeight = element.target.scrollHeight;
+    scrlHeight -= 1;
+    if(this.firstHeight == 0){
+      this.firstHeight = scrlHeight
+    }
+    // console.log(scrlHeight,element.target.clientHeight)
+    if(scrlHeight > element.target.clientHeight || scrlHeight >this.firstHeight  ||
+      element.target.scrollWidth > element.target.clientWidth){
+        // element.preventDefault(); // used for content editable
+        
+        element.target.value =  element.target.value.substr(0, element.target.value.length - 1)
+    }
+  } -->

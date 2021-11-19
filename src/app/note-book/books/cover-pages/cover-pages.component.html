@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="notebook">
+      <div [ngClass]="hideMainCoverPage?'hide-cover-page':'cover'"></div>
+      <div [ngClass]="changedCoverPage?hideCoverPage?'page change-page hide-cover-page':'page change-page':'page'">
+        <p>Title One <br>Title Two</p>
+        <button class= "page-changes-action" (click) = "changeCoverPage()">Change Page</button>
+      </div>
+      <div class="writing-area-container" *ngIf = "hidePage">
+          <pages ></pages>
+      </div>
+     
+    </div>
+  </div>
